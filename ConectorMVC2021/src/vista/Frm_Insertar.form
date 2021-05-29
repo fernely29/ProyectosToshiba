@@ -126,7 +126,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnInsertarDato">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Inserta"/>
+        <Property name="text" type="java.lang.String" value="Insertar"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

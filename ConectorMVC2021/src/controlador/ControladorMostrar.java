@@ -12,7 +12,7 @@ public class ControladorMostrar implements WindowListener{
     Frm_Mostrar vista = new Frm_Mostrar();
         PaisVO pvo = new PaisVO();
         PaisDAO pdao = new PaisDAO();
-        
+       
         public ControladorMostrar(Frm_Mostrar vista, PaisVO pvo, PaisDAO pdao){
             this.vista = vista;
             this.pvo = pvo;
@@ -20,6 +20,8 @@ public class ControladorMostrar implements WindowListener{
             
             vista.addWindowListener(this);                        
         }
+
+    
 private void mostrar (){
     DefaultTableModel m = new DefaultTableModel();
     m.setColumnCount(0);

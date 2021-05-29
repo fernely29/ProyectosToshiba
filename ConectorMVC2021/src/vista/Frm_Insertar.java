@@ -48,7 +48,7 @@ public class Frm_Insertar extends javax.swing.JFrame {
 
         jLabel4.setText("Población:");
 
-        btnInsertarDato.setText("Inserta");
+        btnInsertarDato.setText("Insertar");
 
         btnCancelar.setText("Cancelar");
 

@@ -20,12 +20,29 @@ public class PaisDAO implements ConsultasDAO{
 
     @Override
     public void actualizar(PaisVO p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Conector c = new Conector();
+        try {
+            c.conectar();
+            String consulta = "UPDATE tbl_pais SET nombre_pais='"+p.getNombre_pais()+"', capital_pais='"+p.getCapital_pais()+"',"
+                    + "poblacion_pais='"+p.getPoblacion_pais()+"' WHERE id='"+p.getId_pais()+"';";
+            c.consultas_multiples(consulta);
+        } catch (Exception e) {
+            System.err.println("Mensaje de Actualizar: "+e.getMessage());
+        }
+        c.desconectar();
     }
 
     @Override
     public void eliminar(PaisVO p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Conector c = new Conector();
+        try {
+            c.conectar();
+            String consulta = "DELETE FROM tbl_pais WHERE id='"+p.getId_pais()+"';";
+            c.consultas_multiples(consulta);
+        } catch (Exception e) {
+            System.err.println("Mensaje de Eliminar: "+e.getMessage());
+        }
+        c.desconectar();
     }
 
     @Override
